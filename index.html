@@ -17,12 +17,160 @@
         <script src="js/vendor/modernizr-2.6.1.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id='content'>
+          <h1 id="title">Trend List</h1>
+          <form action="#">
+            <label id="preview">
+              <input type="checkbox" id="show-preview"/>
+              Preview
+            </label>
+            <div id='controls'>
+              <fieldset id="information">
+                <legend>Information</legend>
+                <label>
+                  Headline
+                  <input type="text" id="headline-text" size="30" name="headline" value="Write down some trendy headline!"/>
+                </label>
+
+                <label>
+                  Body text
+                  <textarea id="body-text" name="body" cols="40" rows="6">Perfect copytext and other necessary information. </textarea>
+                </label>
+              </fieldset>
+              <fieldset id="backgrounds">
+                <legend>Background</legend>
+                  <label>
+                    <input type="radio" name="color" class="color" checked="checked" value="default"/>
+                    Default
+                  </label>
+                  <label>
+                    <input type="radio" name="color" class="color" value="bg-ik-blue"/>
+                    Blue
+                  </label>
+                  <label>
+                    <input type="radio" name="color" class="color" value="bg-green"/>
+                    Green
+                  </label>
+              </fieldset>
+              <fieldset id="fonts">
+                <legend>Fonts</legend>
+                  <label>
+                    <input type="radio" name="font" class="font" checked="checked" value="futura"/>
+                    Futura
+                  </label>
+                  <label>
+                    <input type="radio" name="font" class="font" value="helvetica-bold"/>
+                    Helvetica Bold
+                  </label>
+                  <label>
+                    <input type="radio" name="font" class="font" value="times"/>
+                    Times
+                  </label>
+              </fieldset>
+              <fieldset id="trends">
+                <legend>Trends</legend>
+                <label>
+                  <input type="checkbox" class="trend" value="center-aligned"/>
+                  Center aligned
+                </label>
+                <label>
+                  <input type="checkbox" class="trend" value="underline"/>
+                  Underline
+                </label>
+                <label>
+                  <input type="checkbox" class="trend" value="highlighted"/>
+                  Highlighted
+                </label>
+                <label>
+                  <input type="checkbox" class="trend" value="strikethrough"/>
+                  Strikethrough
+                </label>
+                <label>
+                  <input type="checkbox" class="trend" value="ik-blue"/>
+                  IK blue
+                </label>
+                <label>
+                  <input type="checkbox" class="trend" value="neon"/>
+                  Neon
+                </label>
+                <label>
+                  <input type="checkbox" class="trend" value="light"/>
+                  Light
+                </label>
+                <label>
+                  <input type="checkbox" class="trend" value="frame"/>
+                  Frame
+                </label>
+                <label>
+                  <input type="checkbox" class="zigzag" value="zigzag"/>
+                  Zigzag
+                </label>
+                <label>
+                  <input type="checkbox" class="circle-switch" value="circle"/>
+                  Circle
+                </label>
+                <label id='circle-text'>
+                  <input type="text" class="circle-text" value="Circle"/>
+                  Circle text
+                </label>
+                <label>
+                  <input type="checkbox" class="left-right-up-down" value="left-right-up-down"/>
+                  Left, Right, Up & Down
+                </label>
+                <div id="left-right-up-down">
+                  <label>
+                    <input type="text" id="up-text" name="up" class="label" value="up"/>
+                    Up
+                  </label>
+                  <label>
+                    <input type="text" id="down-text" name="down" class="label" value="down"/>
+                    Down
+                  </label>
+                  <label>
+                    <input type="text" id="left-text" name="left" class="label" value="left"/>
+                    Left
+                  </label>
+                  <label>
+                    <input type="text" id="right-text" name="right" class="label" value="right"/>
+                    Right
+                  </label>
+                </div>
+                <label>
+                  <input type="checkbox" class="slash" value="slash"/>
+                  Slash
+                </label>
+                <label>
+                  <input type="checkbox" class="gradient" value="gradient"/>
+                  Gradient
+                </label>
+                <label>
+                  <input type="checkbox" class="content" value="content"/>
+                  Exposed content
+                </label>
+                <div id="exposed-content">
+                  <input type="text" id="imgsrc_0" name="img[0]" class="img" value="http://upload.wikimedia.org/wikipedia/commons/9/91/Lacrimae_mundi.png"/>
+                  <input type="text" id="imgsrc_1" name="img[1]" class="img" value="http://upload.wikimedia.org/wikipedia/commons/f/f3/Between_Jordan_and_Miles_City.jpg"/>
+                  <input type="text" id="imgsrc_2" name="img[2]" class="img" value="http://upload.wikimedia.org/wikipedia/commons/7/78/Maggie_Laubser_Bloublommetjieskloof.jpg"/>
+                  <input type="text" id="imgsrc_3" name="img[3]" class="img" value="http://upload.wikimedia.org/wikipedia/commons/d/d1/Annie_of_the_Royal_Bafokeng.Jpeg"/>
+                  <input type="text" id="imgsrc_4" name="img[4]" class="img" value="http://upload.wikimedia.org/wikipedia/commons/7/72/Milkyway-summit-lake-wv1_-_West_Virginia_-_ForestWander.jpg"/>
+                </div>
+              </fieldset>
+              <input type="submit" value="Save" />
+            </div>
+          </form>
+          <div id='show-pane'>
+            <div id="circle">
+              <div>Circle</div>
+            </div>
+            <div id="up">up</div>
+            <div id="down">down</div>
+            <div id="left">left</div>
+            <div id="right">right</div>
+            <h1 id="headline">Write down some trendy headline!</h1>
+            <pre id="body">Perfect copytext and other necessary information.</pre>
+          </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
