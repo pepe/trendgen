@@ -2,11 +2,10 @@ $(document).ready(
   function() {
     var slash;
 
-
-
     var chosenFont = "futura";
     $("#headline").addClass(chosenFont);
     $("#body").addClass(chosenFont);
+    $("#circle").addClass(chosenFont);
 
     var chosenBg = "default"
     $("#show-pane").addClass(chosenBg);
@@ -30,9 +29,11 @@ $(document).ready(
     $("#fonts input[type='radio']").bind("click", function() {
       $("#headline").removeClass(chosenFont);
       $("#body").removeClass(chosenFont);
+      $("#circle").removeClass(chosenFont);
       chosenFont = $(this).val();
       $("#headline").addClass(chosenFont);
       $("#body").addClass(chosenFont);
+      $("#circle").addClass(chosenFont);
     })
 
     $("#backgrounds input[type='radio']").bind("click", function() {
@@ -119,12 +120,13 @@ $(document).ready(
     $("#headline-text").bind("change", function() {
       var arr = $("#headline-text").val().split(" ");
       var elements = jQuery.map(arr, function(t, i) { return "<span>" + t + "</span>" });
-      $("#headline").html(elements.join(" "));
+      $("#headline").html(elements.join("<span> </span>"));
     })
 
     $("#body-text").bind("change", function() {
-      console.log($(this).val());
-      $("#body").html($(this).val());
+      var arr = $("#body-text").val().split(" ");
+      var elements = jQuery.map(arr, function(t, i) { return "<span>" + t + "</span>" });
+      $("#body").html(elements.join("<span> </span>"));
     })
 
     $("input.content").bind("click", function() {
@@ -132,8 +134,8 @@ $(document).ready(
         $("#exposed-content").show();
         $("#exposed-content input").each(function() {
           if($(this).val() != "") {
-            var w = rand(200),
-                h = rand(200),
+            var w = rand(140) + 80,
+                h = rand(140) + 80,
                 t = rand(550),
                 l = rand(350),
                 c = "img_" + this.id.split("_")[1]

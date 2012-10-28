@@ -301,10 +301,6 @@ legend {
   z-index: 1;
 }
 
-.underline {
-  text-decoration: underline;
-}
-
 .highlighted span {
   background-color: black !important;
   color: white;
@@ -320,8 +316,74 @@ legend {
   color: white;
 }
 
-.strikethrough {
+.underline #body span {
+  text-decoration: underline;
+}
+
+.underline #circle div {
+  text-decoration: underline;
+}
+
+.strikethrough #body span {
   text-decoration: line-through;
+}
+
+.strikethrough #circle div {
+  text-decoration: line-through;
+}
+
+.underline #headline span {
+  background-image: url("../img/big-under.png");
+  background-position: 0px 90px;
+  background-repeat: repeat-x;
+}
+
+.strikethrough #headline span {
+  background-image: url("../img/big-under.png");
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.neon #headline span {
+  background-image: url("../img/big-under-neon.png");
+  background-position: 0px 90px;
+  background-repeat: repeat-x;
+}
+
+.strikethrough.neon #headline span {
+  background-image: url("../img/big-under-neon.png");
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.ik-blue #headline span {
+  background-image: url("../img/big-under-ik-blue.png");
+  background-position: 0px 90px;
+  background-repeat: repeat-x;
+}
+
+.strikethrough.ik-blue #headline span {
+  background-image: url("../img/big-under-ik-blue.png");
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough #headline span {
+  background-image: url("../img/big-both.png") !important;
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough.ik-blue #headline span {
+  background-image: url("../img/big-both-ik-blue.png") !important;
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough.neon #headline span {
+  background-image: url("../img/big-both-neon.png") !important;
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
 }
 
 .center-aligned {
@@ -397,7 +459,37 @@ legend {
   width: 100px;
   height: 30px;
   color: white;
-  background-color: blue;
+  background-color: black;
+  padding: 35px 0px 32px 0px;
+  text-align: center;
+  z-index: 999;
+}
+
+.ik-blue #circle {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: #00f;
+  padding: 35px 0px 32px 0px;
+  text-align: center;
+  z-index: 999;
+}
+
+.neon #circle {
+  display: none;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: #0f0 !important;
   padding: 35px 0px 32px 0px;
   text-align: center;
   z-index: 999;
@@ -407,6 +499,10 @@ legend {
   display: none;
 }
 
+#circle div {
+  font-family: inherit;
+}
+
 .slash_0 {
   height: 0px;
   border: 2px solid black;
@@ -414,6 +510,7 @@ legend {
   position: absolute;
   top: 47%;
   left: -41%;
+  z-index: 800;
   transform:rotate(58deg);
   -o-transform:rotate(58deg);
   -moz-transform:rotate(58deg);
@@ -428,6 +525,7 @@ legend {
   position: absolute;
   top: 47%;
   left: -39%;
+  z-index: 800;
   transform:rotate(-58deg);
   -o-transform:rotate(-58deg);
   -moz-transform:rotate(-58deg);
@@ -442,6 +540,7 @@ legend {
   position: absolute;
   top: 47%;
   left: -39%;
+  z-index: 800;
   transform:rotate(-58deg);
   -o-transform:rotate(-58deg);
   -moz-transform:rotate(-58deg);
@@ -456,6 +555,7 @@ legend {
   position: absolute;
   top: 47%;
   left: -41%;
+  z-index: 800;
   transform:rotate(58deg);
   -o-transform:rotate(58deg);
   -moz-transform:rotate(58deg);
