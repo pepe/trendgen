@@ -305,47 +305,17 @@ legend {
   text-decoration: underline;
 }
 
-.highlighted #headline {
+.highlighted span {
   background-color: black !important;
   color: white;
 }
 
-.highlighted #body {
-  background-color: black !important;
-  color: white;
-}
-
-.highlighted #headline span {
-  background-color: black !important;
-  color: white;
-}
-
-.highlighted.ik-blue #headline {
+.highlighted.ik-blue span {
   background-color: #00f !important;
   color: white;
 }
 
-.highlighted.ik-blue #body {
-  background-color: #00f !important;
-  color: white;
-}
-
-.highlighted.ik-blue #headline span {
-  background-color: #00f !important;
-  color: white;
-}
-
-.highlighted.neon #headline {
-  background-color: #0f0 !important;
-  color: white;
-}
-
-.highlighted.neon #body {
-  background-color: #0f0 !important;
-  color: white;
-}
-
-.highlighted.neon #headline span {
+.highlighted.neon span {
   background-color: #0f0 !important;
   color: white;
 }
@@ -428,7 +398,7 @@ legend {
   height: 30px;
   color: white;
   background-color: blue;
-  padding: 35px 0px 31px 0px;
+  padding: 35px 0px 32px 0px;
   text-align: center;
   z-index: 999;
 }

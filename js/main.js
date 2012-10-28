@@ -117,7 +117,9 @@ $(document).ready(
     })
 
     $("#headline-text").bind("change", function() {
-      $("#headline").html($(this).val());
+      var arr = $("#headline-text").val().split(" ");
+      var elements = jQuery.map(arr, function(t, i) { return "<span>" + t + "</span>" });
+      $("#headline").html(elements.join(" "));
     })
 
     $("#body-text").bind("change", function() {
