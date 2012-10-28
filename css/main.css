@@ -186,6 +186,7 @@ legend {
   z-index: 999;
   position: absolute;
   top: 520px;
+  width: 450px;
  }
 
 #show-pane {
@@ -299,6 +300,7 @@ legend {
   float: right;
   z-index: 1;
 }
+
 .underline {
   text-decoration: underline;
 }
@@ -308,8 +310,43 @@ legend {
   color: white;
 }
 
+.highlighted #body {
+  background-color: black !important;
+  color: white;
+}
+
 .highlighted #headline span {
   background-color: black !important;
+  color: white;
+}
+
+.highlighted.ik-blue #headline {
+  background-color: #00f !important;
+  color: white;
+}
+
+.highlighted.ik-blue #body {
+  background-color: #00f !important;
+  color: white;
+}
+
+.highlighted.ik-blue #headline span {
+  background-color: #00f !important;
+  color: white;
+}
+
+.highlighted.neon #headline {
+  background-color: #0f0 !important;
+  color: white;
+}
+
+.highlighted.neon #body {
+  background-color: #0f0 !important;
+  color: white;
+}
+
+.highlighted.neon #headline span {
+  background-color: #0f0 !important;
   color: white;
 }
 
@@ -384,6 +421,8 @@ legend {
 #circle {
   display: none;
   position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   width: 100px;
   height: 30px;
