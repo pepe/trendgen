@@ -6,6 +6,7 @@ $(document).ready(
     $("#headline").addClass(chosenFont);
     $("#body").addClass(chosenFont);
     $("#circle").addClass(chosenFont);
+    $(".up-down-left-right").addClass(chosenFont);
 
     var chosenBg = "default"
     $("#show-pane").addClass(chosenBg);
@@ -30,10 +31,12 @@ $(document).ready(
       $("#headline").removeClass(chosenFont);
       $("#body").removeClass(chosenFont);
       $("#circle").removeClass(chosenFont);
+      $(".up-down-left-right").addClass(chosenFont);
       chosenFont = $(this).val();
       $("#headline").addClass(chosenFont);
       $("#body").addClass(chosenFont);
       $("#circle").addClass(chosenFont);
+      $(".up-down-left-right").removeClass(chosenFont);
     })
 
     $("#backgrounds input[type='radio']").bind("click", function() {
@@ -164,6 +167,7 @@ $(document).ready(
 
             var img = $("<img src='" + $(this).val() + "' />")
             img.addClass(c)
+            img.addClass("content-img")
             img.css({top: t, left: l, width: w, heigth: h})
             $("#headline").before(img)
           }
@@ -208,12 +212,20 @@ $(document).ready(
         h = h + "&right=" + $("#right-text").val()
       }
       if($("input.content:checked").length > 0) {
-        $("#show-pane img").each(function() {
+        $("img.content-img").each(function() {
           if($(this).attr("src") != "") {
-            h = h + "&" + $(this).attr("class") + "="
-            h = h + $(this).attr("src")
+            h = h + "&image="
+            h = h + encodeURI($(this).attr("src"))
             h = h + "@" + $(this).attr("style")
           }
+        })
+      }
+      if($("input.tildes:checked").length > 0) {
+        $("img.tilde").each(function() {
+          h = h + "&tilde=" + $(this).attr("src")
+          h = h + "@" + $(this).css("top")
+          h = h + ":" + $(this).css("left")
+          h = h + ":" + $(this).css("transform")
         })
       }
       if(trends.length > 0) {

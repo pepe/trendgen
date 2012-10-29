@@ -109,7 +109,7 @@ body.centered {
   clear: right;
   position: absolute;
   top: 120px;
-  left: 490px;
+  left: 550px;
 }
 
 .ik-blue {
@@ -191,8 +191,8 @@ legend {
 
 #show-pane {
   border: 12px solid transparent;
-  height: 676px;
-  width: 426px;
+  height: 710px;
+  width: 500px;
   float: left;
   clear: left;
   overflow: hidden;
@@ -406,7 +406,6 @@ legend {
   display: none;
   position: absolute;
   top: 0px;
-  left: 0px;
   width: 100%;
   text-align: center;
 }
@@ -415,7 +414,6 @@ legend {
   display: none;
   position: absolute;
   top: 660px;
-  left: 0px;
   width: 100%;
   text-align: center;
   transform:rotate(180deg);
@@ -441,7 +439,7 @@ legend {
   display: none;
   position: absolute;
   top: 300px;
-  left: -210px;
+  left: -230px;
   width: 100%;
   text-align: center;
   transform:rotate(-90deg);
