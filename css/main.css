@@ -179,6 +179,9 @@ legend {
   font-size: 5em;
   font-weight: normal;
   z-index: 666;
+  top: 50px;
+  left: 24px;
+  width: 443px;
 }
 
 #body {
@@ -186,7 +189,8 @@ legend {
   z-index: 667;
   position: absolute;
   top: 520px;
-  width: 450px;
+  left: 24px;
+  width: 443px;
  }
 
 #show-pane {
