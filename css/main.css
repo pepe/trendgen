@@ -332,57 +332,113 @@ legend {
   text-decoration: line-through;
 }
 
-.underline #headline span {
+.underline #headline.futura span {
   background-image: url("../img/big-under.png");
   background-position: 0px 87px;
   background-repeat: repeat-x;
 }
 
+.strikethrough #headline.futura span {
+  background-image: url("../img/big-under.png");
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough #headline.futura span {
+  background-image: url("../img/big-both.png") !important;
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+
+.underline #headline span {
+  background-image: url("../img/big-under.png");
+  background-position: 0px 77px;
+  background-repeat: repeat-x;
+}
+
 .strikethrough #headline span {
   background-image: url("../img/big-under.png");
+  background-position: 0px 45px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough #headline span {
+  background-image: url("../img/big-both.png") !important;
+  background-position: 0px 45px;
+  background-repeat: repeat-x;
+}
+
+
+.underline.neon #headline.futura span {
+  background-image: url("../img/big-under-neon.png");
+  background-position: 0px 90px;
+  background-repeat: repeat-x;
+}
+
+.strikethrough.neon #headline.futura span {
+  background-image: url("../img/big-under-neon.png");
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough.neon #headline.futura span {
+  background-image: url("../img/big-both-neon.png") !important;
   background-position: 0px 65px;
   background-repeat: repeat-x;
 }
 
 .underline.neon #headline span {
   background-image: url("../img/big-under-neon.png");
-  background-position: 0px 90px;
+  background-position: 0px 77px;
   background-repeat: repeat-x;
 }
 
 .strikethrough.neon #headline span {
   background-image: url("../img/big-under-neon.png");
+  background-position: 0px 45px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough.neon #headline span {
+  background-image: url("../img/big-both-neon.png") !important;
+  background-position: 0px 45px;
+  background-repeat: repeat-x;
+}
+
+.underline.ik-blue #headline.futura span {
+  background-image: url("../img/big-under-ik-blue.png");
+  background-position: 0px 90px;
+  background-repeat: repeat-x;
+}
+
+.strikethrough.ik-blue #headline.futura span {
+  background-image: url("../img/big-under-ik-blue.png");
+  background-position: 0px 65px;
+  background-repeat: repeat-x;
+}
+
+.underline.strikethrough.ik-blue #headline.futura span {
+  background-image: url("../img/big-both-ik-blue.png") !important;
   background-position: 0px 65px;
   background-repeat: repeat-x;
 }
 
 .underline.ik-blue #headline span {
   background-image: url("../img/big-under-ik-blue.png");
-  background-position: 0px 90px;
+  background-position: 0px 77px;
   background-repeat: repeat-x;
 }
 
 .strikethrough.ik-blue #headline span {
   background-image: url("../img/big-under-ik-blue.png");
-  background-position: 0px 65px;
-  background-repeat: repeat-x;
-}
-
-.underline.strikethrough #headline span {
-  background-image: url("../img/big-both.png") !important;
-  background-position: 0px 65px;
+  background-position: 0px 45px;
   background-repeat: repeat-x;
 }
 
 .underline.strikethrough.ik-blue #headline span {
   background-image: url("../img/big-both-ik-blue.png") !important;
-  background-position: 0px 65px;
-  background-repeat: repeat-x;
-}
-
-.underline.strikethrough.neon #headline span {
-  background-image: url("../img/big-both-neon.png") !important;
-  background-position: 0px 65px;
+  background-position: 0px 45px;
   background-repeat: repeat-x;
 }
 
