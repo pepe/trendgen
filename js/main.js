@@ -117,6 +117,28 @@ $(document).ready(
       }
     })
 
+    $(".tildes").bind("click", function() {
+      if($(this).attr("checked") == "checked") {
+        for(var i = 1; i < 4; i++) {
+          var top = rand(550)
+          var left = rand(350)
+          var rotation = "rotate(" + rand(180) + "deg)"
+          var width = rand(250) + 80
+
+          var img = $("<img class='tilde' src='img/tilde" + i + ".png'/>")
+          img.css({ top: top, left: left, width: width,
+                    transform: rotation,
+                    '-o-transform': rotation,
+                    '-moz-transform': rotation,
+                    '-webkit-transform': rotation
+          })
+          $("#headline").before(img)
+        }
+      } else {
+        $(".tilde").remove()
+      }
+    })
+
     $("#headline-text").bind("change", function() {
       var arr = $("#headline-text").val().split(" ");
       var elements = jQuery.map(arr, function(t, i) { return "<span>" + t + "</span>" });
@@ -166,18 +188,9 @@ $(document).ready(
       var h
       h = "headline=" + escape($("#headline-text").val())
       h = h + "&body=" + escape($("#body-text").val())
-      h = h + "&background=" + $("input.color[checked='checked']").val()
-      h = h + "&font=" + $("input.font[checked='checked']").val()
+      h = h + "&background=" + $("input:checked.color").val()
+      h = h + "&font=" + $("input:checked.font").val()
       var trends = $("#trends input.trend:checked")
-      if(trends.length > 0) {
-        h = h + "&trends=" + $(this).val();
-        trends.each(function() {
-          h = h + "&" + $(this).val()
-        })
-      }
-      if($("input.slash:checked").length > 0) {
-        h = h + "&slash=" + slash
-      }
       if($("input.slash:checked").length > 0) {
         h = h + "&slash=" + slash
       }
@@ -186,6 +199,7 @@ $(document).ready(
       }
       if($("input.circle-switch:checked").length > 0) {
         h = h + "&circle=" + $(".circle-text").val()
+        h = h + "@" + $("#circle").css("top") + ":" + $("#circle").css("left")
       }
       if($("input.left-right-up-down:checked").length > 0) {
         h = h + "&up=" + $("#up-text").val()
@@ -202,9 +216,49 @@ $(document).ready(
           }
         })
       }
+      if(trends.length > 0) {
+        h = h + "&trends=" + $(this).val();
+        trends.each(function() {
+          h = h + "&" + $(this).val()
+        })
+      }
       document.location.hash = h
       return false;
     })
+
+    if(document.location.hash != "") {
+      var s = document.location.hash.split("&")
+      jQuery.each(s, function(i, t) {
+        var com = t.split("=")
+        com.reverse()
+        switch(com.pop()) {
+          case "#headline":
+            $("#headline-text").val(decodeURIComponent(com.pop()));
+            $("#headline-text").trigger("change")
+            break
+          case "body":
+            $("#body-text").val(decodeURIComponent(com.pop()));
+            $("#body-text").trigger("change")
+            break
+          case "background":
+            $("#backgrounds input:checked.color").attr("checked", "")
+            var el = $("#backgrounds input.color[value='" + com.pop() + "']")
+            el.attr("checked", "checked")
+            el.trigger("click")
+            break
+          case "font":
+            $("#fonts input:checked.color").attr("checked", "")
+            var el = $("#fonts input.font[value='" + com.pop() + "']")
+            el.attr("checked", "checked")
+            el.trigger("click")
+            break
+          case "circle":
+            $("circle-switch").attr("checked", "checked").trigger("click")
+            break
+        }
+
+      })
+    }
 
   }
 )
