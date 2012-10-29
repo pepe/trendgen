@@ -184,6 +184,10 @@ legend {
   width: 443px;
 }
 
+#headline span {
+  -webkit-print-color-adjust: exact;
+}
+
 #body {
   float: left;
   z-index: 667;
@@ -191,6 +195,7 @@ legend {
   top: 520px;
   left: 24px;
   width: 443px;
+  -webkit-print-color-adjust: exact;
  }
 
 #show-pane {
@@ -201,6 +206,7 @@ legend {
   overflow: hidden;
   position: absolute;
   top: 120px;
+  -webkit-print-color-adjust: exact;
 }
 
 .gradient.bottom {

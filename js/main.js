@@ -122,9 +122,9 @@ $(document).ready(
 
     $(".tildes").bind("click", function() {
       if($(this).attr("checked") == "checked") {
-        for(var i = 1; i < 6; i++) {
-          var top = rand(350)
-          var left = rand(250)
+        for(var i = 1; i < 3 + rand(3); i++) {
+          var top = i*20 + rand(550)
+          var left = i*10 + rand(350)
           var rotation = "rotate(" + rand(360) + "deg)"
           var tilde = rand(3) + 1
 
