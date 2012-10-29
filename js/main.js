@@ -122,14 +122,14 @@ $(document).ready(
 
     $(".tildes").bind("click", function() {
       if($(this).attr("checked") == "checked") {
-        for(var i = 1; i < 4; i++) {
-          var top = rand(550)
-          var left = rand(350)
-          var rotation = "rotate(" + rand(180) + "deg)"
-          var width = rand(250) + 80
+        for(var i = 1; i < 6; i++) {
+          var top = rand(350)
+          var left = rand(250)
+          var rotation = "rotate(" + rand(360) + "deg)"
+          var tilde = rand(3) + 1
 
-          var img = $("<img class='tilde' src='img/tilde" + i + ".png'/>")
-          img.css({ top: top, left: left, width: width,
+          var img = $("<img class='tilde' src='img/til" + tilde + ".png'/>")
+          img.css({ top: top, left: left,
                     transform: rotation,
                     '-o-transform': rotation,
                     '-moz-transform': rotation,
